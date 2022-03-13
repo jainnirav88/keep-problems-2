@@ -50,8 +50,10 @@ export default class ProblemList extends Component {
   }
 
   componentDidMount() {
+    console.log(`Backend server is running on port ${process.env.REACT_APP_PORT}`);
+    
     // Fetch problems-list from server.
-    axios.get("http://localhost:5000/problems")
+    axios.get(`http://localhost:${process.env.REACT_APP_PORT}/problems`)
       .then(res => {
         console.log('Problem list from the server: ', res.data);
 
@@ -493,7 +495,7 @@ export default class ProblemList extends Component {
   deleteProblem(id, folder) {
     console.log("Delete: ", id, folder);
 
-    axios.delete('http://localhost:5000/problems/' + id)
+    axios.delete(`http://localhost:${process.env.REACT_APP_PORT}/problems/` + id)
       .then(res => {
         console.log(res.data);
 

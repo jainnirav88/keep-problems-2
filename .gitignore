@@ -3,6 +3,7 @@
 #
 src/utils.js
 src - 2
+screenshots/Code-screenshots
 
 # dependencies
 /backend/node_modules
@@ -23,6 +24,8 @@ src - 2
 .env.test.local
 .env.production.local
 .env
+todo
+other.txt
 
 npm-debug.log*
 yarn-debug.log*
